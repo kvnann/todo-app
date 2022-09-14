@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/home.css">
+    <title>Home | To do Master</title>
+</head>
+<body class='homePage'>
+    <div class="main">
+        <div class="header">
+            <div class="headerTitle usernametoDisplay hide">
+                <h1 class="loading">Please wait...</h1>
+                <div class="usernameDisplay">
+                    <h1><span class='userNameToShow'>{firstName}</span>'s to-dos</h1>
+                </div>
+            </div>
+            <div class="btn-add"><a href="./todos/create"><button class='btn'>ADD NEW GOAL</button></a></div>
+        </div>
+        <div class="page-main">
+            <div id="noTodosMessage">
+                <h2>You don't have any to-do</h2>
+                <div class="btn-add"><a href="./todos/create"><button class='btn'>Let's create one!</button></a></div>
+            </div>
+            <div class="todos hide">
+
+            </div>
+            <div class="actions">
+                <div class="action">
+                    <a href="./account/edit"><button class="btn btn-toleft">Edit account</button></a>
+                </div>
+                <div class="action">
+                    <button id="logOutButton" class="btn btn-toleft">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./public/home.js"></script>
+    <script src="./public/app.js"></script>
+</body>
+</html>

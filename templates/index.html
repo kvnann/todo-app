@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Todo Master | Log In or Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../public/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+  <body class="sessionCreate">
+    <div class="main">
+        <div class="part-one display1 display11" id="part-one">
+            <!-- Message for the first page  -->
+            <div class="message1">
+                <div class="partHeader text-center">
+                    <h1 class="display-3">Hello, friend</h1>
+                    <div class="muted montegro">Create targets and start doing them now! You can sign up from below and start the journey!</div>
+                    <div class="montegro">Already a user? Then sign in!</div>
+                    <div class="buttons">
+                        <button class="mbtn btn-signup" id="btn-signup">Create an account!</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message2">
+                <div class="partHeader text-center">
+                    <h1 class="display-3">Welcome back!</h1>
+                    <div class="muted">Create targets and start doing them now! <br>You can sign up from the quick form and start the journey!</div>
+                    <div class="buttons">
+                        <button class="mbtn btn-signin" id="btn-signin">Log in to an account</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="part-two display2 display21" id="part-two">
+            <div class="signin">
+                <h1 class="display-3">Log In</h1>
+                <form action="../../api/tokens" id="sessionCreate" method="post">
+                    <div id="errorMessage" class="errorMessage" >Missing required field(s)!</div>
+                    <div id="waitingMessage" class="waitingMessage"><center><div class="dots-bars-2"></div></center></div>
+                    <div id="successMessage" class="successMessage">Logged in successfully!</div>
+                    <div class="formElement text-center">
+                        <input placeholder="Phone Number" type="tel" name="phone" id="">
+                    </div>
+                    <div class="formElement text-center">
+                        <input placeholder="Password" type="password" name="password" id="">
+                    </div>
+                    <div class="formElement text-center">
+                        <input type="submit" class="btn-submit" name="submit" id="">
+                    </div>
+                </form>
+            </div>
+            <div class="signup">
+                
+                <h1 class="display-3">Sign Up</h1>
+                <form action="../../api/users" id="signupForm" method="post">
+                    <div id="errorMessage" class="errorMessage" >Missing required field(s)!</div>
+                    <div id="waitingMessage" class="waitingMessage"><center><div class="dots-bars-2"></div></center></div>
+                    <div id="successMessage" class="successMessage">Signed Up successfully!</div>
+                    <div class="formElement text-center">
+                        <input placeholder="First name" type="tel" name="firstName" id="">
+                    </div>
+                    <div class="formElement text-center">
+                        <input placeholder="Last Name" type="tel" name="lastName" id="">
+                    </div>
+                    <div class="formElement text-center">
+                        <input placeholder="Phone Number (max 10 digits)" maxlength="10" type="tel" name="phone" id="">
+                    </div>
+                    <div class="formElement text-center">
+                        <input placeholder="Password" type="password" name="password" id="">
+                    </div>
+                    <div class="formElement text-center">
+                        <input type="checkbox" style="width:auto;" name="tosAgreement" id="">
+                        <label for="tosAgreement"> I accept the terms of service</label>
+                    </div>
+                    <div class="formElement text-center">
+                        <input type="submit" class="btn-submit" name="submit" id="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../public/app.js"></script>
+    <script src="../public/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

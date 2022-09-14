@@ -1,0 +1,51 @@
+.box{
+    width:280px;
+    display:flex;
+    flex-direction: column;
+}
+#pls{
+    font-size:31px;
+}
+.formElement{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.phoneButtons{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.requirePassword{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column; 
+}
+#plsPhone{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    margin-top: 20px;
+  }
+
+  input[type="password"]{
+    max-width:100%;
+}
+#todosEdit3{
+    width:100%;
+    display:none;
+}
+
+
+.deleteTodo{
+    background: rgb(199, 72, 72);
+    color:white;
+    border:1px solid rgb(199, 72, 72);
+    width:100%;
+    margin-top: 10px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/todosCreate.css">
+</head>
+<body class="todosCreate">
+    <div class="main">
+        <div class="box">
+            <form action="../../api/todos" class="text-center" id="todosCreate" method="post">
+                <div id="errorMessage" class="errorMessage" >An error occured, please try again.</div>
+                <div id="waitingMessage" class="waitingMessage"><center><div class="dots-bars-2"></div></center></div>
+                <div id="successMessage" class="successMessage">Todo created successfully</div>
+                <div class="formElement formAbove">
+                    <div class="formLabel">Title</div>
+                    <div class="inputSubject">
+                        <input type="text" name="title">
+                    </div>
+                </div>
+                <div class="formBelow">
+                    <div class="formElement">
+                        <div class="formLabel">Note</div>
+                        <div class="formElement">
+                            <textarea id="" name="text"></textarea>
+                        </div>
+                    </div>
+                    <div class="formElement">
+                        <div class="formLabel">Password</div>
+                        <div class="formElement">
+                            <input name="password" id="password-input" type="password">
+                            <div class="phoneButtons">
+                                <div class="first-row row phone-row">
+                                    <div class="phoneButton col" id="btn1">1</div>
+                                    <div class="phoneButton col" id="btn2">2</div>
+                                    <div class="phoneButton col" id="btn3">3</div>
+                                </div>  
+                                <div class="second-row row phone-row">
+                                    <div class="phoneButton col" id="btn4">4</div>
+                                    <div class="phoneButton col" id="btn5">5</div>
+                                    <div class="phoneButton col" id="btn6">6</div>
+                                </div>  
+                                <div class="third-row row phone-row">
+                                    <div class="phoneButton col" id="btn7">7</div>
+                                    <div class="phoneButton col" id="btn8">8</div>
+                                    <div class="phoneButton col" id="btn9">9</div>
+                                </div>  
+                                <div class="fourth-row row phone-row">
+                                    <div class="phoneButtonClear col" id="btn10">C</div>
+                                    <div class="phoneButton col" id="btn0">0</div>
+                                    <div class="phoneButtonBackspace col" id="btn12"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                                        <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
+                                      </svg></div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formElement">
+                        <div class="formLabel">Deadline</div>
+                        <div class="lastElements">
+                            <div class="formElement">
+                                <input name="deadline" type="date">
+                            </div>
+                            <div class="formElement sumbitBtnBox">
+                                <input type="submit" value="Submit" class="submitBtn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../public/todosCreate.js"></script>
+    <script src="../../public/app.js"></script>
+</body>
+</html>

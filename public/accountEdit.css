@@ -1,0 +1,163 @@
+
+.dots-bars-2 {
+    width: 40px;
+    height: 40px;
+    --c: linear-gradient(currentColor 0 0);
+    --r1: radial-gradient(farthest-side at bottom,currentColor 93%,#0000);
+    --r2: radial-gradient(farthest-side at top   ,currentColor 93%,#0000);
+    background: 
+      var(--c) ,
+      var(--r1),
+      var(--r2),
+      var(--c) ,  
+      var(--r1),
+      var(--r2),
+      var(--c) ,
+      var(--r1),
+      var(--r2);
+    background-repeat: no-repeat;
+    animation: db2 1s infinite alternate;
+  }
+  
+  @keyframes db2 {
+    0%,25% {
+      background-size: 8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+   }
+   50% {
+      background-size: 8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+   }
+   75% {
+      background-size: 8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+   }
+   95%,100% {
+      background-size: 8px 100%,8px 4px, 8px 4px,8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
+   }
+  }
+
+
+  *{
+    font-family: "Krungthep";
+    color:#202a46;
+
+}
+
+@font-face {
+    font-family: 'Monaco';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Monaco'), url('Monaco.woff') format('woff');
+}
+body{
+    margin: 0;padding: 0;
+    background:url(./bglight.png);
+}
+.main{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+}
+.box{
+    backdrop-filter: blur(15px);
+    border-radius:45px;
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    border:none;
+    padding: 50px;
+}
+
+.formLabel{
+    font-size:20px;
+}
+input{
+    padding:10px 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border:none;
+    text-align: center;
+
+}
+
+input:focus{
+    outline:none;
+}
+
+input[type="submit"]{
+    background-color:  #F0E2CB;
+    transition: .2s;
+}
+input[type="submit"]:hover{
+    background:#202a46;
+    color:#F0E2CB
+}
+
+
+
+#errorMessage{
+    background: rgb(221, 66, 66);
+    color:white;
+    text-align: center;
+    padding:10px;
+    margin: 5px;
+    width:80%;
+    display:none;
+    transition: .2s;
+}
+#waitingMessage{
+    width:80%;
+    transition: .2s;
+    text-align: center;
+    padding:10px;
+    display:none;
+    margin: 5px;
+}
+#successMessage{
+    transition: .2s;
+    width:80%;
+    display:none;
+    background: rgb(21, 172, 8);
+    color:white;
+    text-align: center;
+    padding:10px;
+    margin: 5px;
+}
+
+#accountEdit3{
+    display:none;
+    width:100%;
+}
+
+.btn{
+    padding:10px 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border:none;
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+}
+.btn:hover{
+    background: none;
+    color:#F0E2CB;
+}
+#accountEdit3{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+.deleteAccount{
+    background: rgb(199, 72, 72);
+    width:60%;
+    color:white;
+    border:1px solid rgb(199, 72, 72);
+    margin-top: 0px;
+}

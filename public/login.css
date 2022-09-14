@@ -1,0 +1,237 @@
+*{
+    font-family: "Krungthep";
+}
+.montegro{
+    font-family: "Monaco";
+}
+@font-face {
+    font-family: 'Monaco';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Monaco'), url('Monaco.woff') format('woff');
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background: url(./bg.png);
+}
+.main{
+    width:70%;
+    height:80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+}
+.part-one{
+    width:50%;
+    transition:.2s;
+    height: 100%;
+}
+.part-two{
+    width:50%;
+    height: 100%;
+    transition:.2s;
+}
+.display11{
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    backdrop-filter: blur(15px);
+    color:white;
+    display:flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    padding: 20px;
+}
+.display12{
+    backdrop-filter: blur(15px);
+    color:white;
+    height: 100%;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.display2{
+    background: white;
+    height: 100%;
+    color:#202a46;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.display21{
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+.display22{
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+/* For the displays */
+.display11 .message1{
+    display:flex;
+}
+.display11 .message2{
+    display:none;
+}
+.display12 .message1{
+    display:none;
+}
+.display12 .message2{
+    display:flex;
+}
+.display21 .signin{
+    display:flex;
+}
+.display21 .signup{
+    display:none;
+}
+.display22 .signin{
+    display:none;
+}
+.display22 .signup{
+    display:flex;
+}
+.muted{
+    color:#ffffffde;
+}
+.display11 .mbtn{
+    border:1px solid white;
+    margin: 8px;
+    padding: 15px;
+    background: white;
+    color:#202a46;
+    transition: .2s;
+}
+.display11 .mbtn:hover{
+    background: none;
+    color:white;
+}
+.display12 .mbtn{
+    border:1px solid white;
+    margin: 8px;
+    padding: 15px;
+    background: white;
+    color:#202a46;
+    transition: .2s;
+}
+.display12 .mbtn:hover{
+    background: none;
+    color:white;
+}
+button:focus,input:focus{
+    outline:none!important;
+}
+.buttons{
+    margin: 10px;
+}
+
+.signin{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formElement{
+    margin: 20px 0 ;
+}
+input{
+    text-align: center;
+    padding:5px 20px;
+    width:300px;
+}
+.btn-submit{
+    width:auto;
+    border:1px solid #202a46;
+    background: #202a46;
+    padding: 5px 30px;
+    color:white;
+    transition: .2s;
+}
+.btn-submit:hover{
+    background: white;
+    color:#202a46;
+}
+#errorMessage{
+    background: rgb(221, 66, 66);
+    color:white;
+    text-align: center;
+    padding:10px;
+    margin: 5px;
+    display:none;
+    transition: .2s;
+}
+#waitingMessage{
+    width:100%;
+    transition: .2s;
+    text-align: center;
+    padding:10px;
+    display:none;
+    margin: 5px;
+}
+#successMessage{
+    transition: .2s;
+    display:none;
+    background: rgb(21, 172, 8);
+    color:white;
+    text-align: center;
+    padding:10px;
+    margin: 5px;
+}
+
+
+.dots-bars-2 {
+    width: 40px;
+    height: 40px;
+    --c: linear-gradient(currentColor 0 0);
+    --r1: radial-gradient(farthest-side at bottom,currentColor 93%,#0000);
+    --r2: radial-gradient(farthest-side at top   ,currentColor 93%,#0000);
+    background: 
+      var(--c) ,
+      var(--r1),
+      var(--r2),
+      var(--c) ,  
+      var(--r1),
+      var(--r2),
+      var(--c) ,
+      var(--r1),
+      var(--r2);
+    background-repeat: no-repeat;
+    animation: db2 1s infinite alternate;
+  }
+  
+  @keyframes db2 {
+    0%,25% {
+      background-size: 8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(50% - 2px),0 calc(50% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+   }
+   50% {
+      background-size: 8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(50% - 2px),50% calc(50% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+   }
+   75% {
+      background-size: 8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px,8px 0,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(50% - 2px),100% calc(50% + 2px);
+   }
+   95%,100% {
+      background-size: 8px 100%,8px 4px, 8px 4px,8px 100%,8px 4px,8px 4px,8px 100%,8px 4px,8px 4px;
+      background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
+   }
+  }

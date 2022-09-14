@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit your account | To Do Master</title>
+    <link rel="stylesheet" href="../public/accountEdit.css">
+</head>
+<body class="accountEdit">
+    <div class="main">
+        <div class="box">
+            <form id="accountEdit1" action="../../api/users" method="post">
+                <input type="hidden" name='_method' value='put'>
+                <div id="errorMessage" class="errorMessage" >An error occured, please try again</div>
+                <div id="waitingMessage" class="waitingMessage"><center><div class="dots-bars-2"></div></center></div>
+                <div id="successMessage" class="successMessage">Account edited successfully!</div>
+                <div class="formElement text-center">
+                    <input type="hidden" placeholder="Phone Number" class='displayPhoneInput' name="phone" maxlength=10>
+                </div>
+                <div class="formElement text-center">
+                    <input type="text" placeholder="First Name" value="Please Wait..." class='displayFirstNameInput' name="firstName" maxlength=30 disabled>
+                </div>
+                <div class="formElement text-center">
+                    <input type="text" placeholder="First Name" value="Please Wait..." class='displayLastNameInput' name="lastName" maxlength=30 disabled>
+                </div>
+                <div class="formElement text-center">
+                    <input type="password" class="" placeholder="Password" name="password">
+                </div>
+                <div class="formElement">
+                    <center><input type="submit" value="Edit your account"></center>
+                </div>
+            </form>
+            <div class="center" id="accountEdit3">
+                <button class="btn deleteAccount">Delete account</button>
+            </div>
+        </div>
+    </div>
+    <script src="../public/app.js"></script>
+</body>
+</html>
